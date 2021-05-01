@@ -1,0 +1,26 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- create:
+  - ~/.zim
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.zim/zimfw.zsh: zimfw.zsh
+    ~/.zimrc: zimrc
+    ~/.config/zsh: config/zsh
+    ~/.config/alacritty: config/alacritty
+    ~/.config/ranger: config/ranger
+    ~/.config/polybar: config/polybar
+    ~/.config/i3: config/i3
+    ~/.config/rofi: config/rofi
+    ~/.config/clash: config/clash
+    ~/scripts: scripts
+
+- shell:
+  - [chmod +x scripts/autostart.sh]
+  - [git submodule update --init --recursive, Installing submodules]
+
