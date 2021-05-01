@@ -5,6 +5,7 @@ alias lock=i3lock-fancy
 alias ra=ranger
 alias cat=bat
 alias grep=rg
+alias ec=emacsclient
 alias ls=lsd
 alias l="lsd -l"
 alias la="lsd -ail"
