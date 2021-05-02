@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 窗口特效合成器
-picom &
+picom -b &
 # 网络代理
 clash &
 # 通知管理
@@ -16,6 +16,8 @@ nm-applet &
 blueman-applet &
 # 截图工具
 flameshot &
+# oneko
+oneko &
 
 /bin/bash ~/scripts/dwm-status.sh &
 /bin/bash ~/scripts/videowallpaper.sh &
