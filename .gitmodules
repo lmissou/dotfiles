@@ -1,3 +1,6 @@
 [submodule "config/ranger/plugins/ranger_devicons"]
 	path = config/ranger/plugins/ranger_devicons
 	url = https://github.com/qdwp/ranger_devicons
+[submodule "config/rofi/rofi-themes"]
+	path = config/rofi/rofi-themes
+	url = https://github.com/davatorium/rofi-themes

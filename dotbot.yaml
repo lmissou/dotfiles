@@ -18,9 +18,11 @@
     ~/.config/i3: config/i3
     ~/.config/rofi: config/rofi
     ~/.config/clash: config/clash
+    ~/.config/picom.conf: config/picom.conf
+    ~/.config/gitui: config/gitui
     ~/scripts: scripts
 
 - shell:
   - [chmod +x scripts/autostart.sh]
-  - [git submodule update --init --recursive, Installing submodules]
+  # - [git submodule update --init --recursive, Installing submodules]
 
