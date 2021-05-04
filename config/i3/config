@@ -107,11 +107,11 @@ bindsym $mod+Alt+space focus mode_toggle
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 
-set $ws1 "1 :  "
-set $ws2 "2 :  "
-set $ws3 "3 :  "
-set $ws4 "4 :  "
-set $ws5 "5 :  "
+set $ws1 "1: "
+set $ws3 "2: "
+set $ws2 "3: "
+set $ws4 "4: "
+set $ws5 "5: "
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -199,6 +199,7 @@ exec --no-startup-id sh ~/.config/polybar/launch.sh
 ### 按键绑定
 # rofi应用启动器
 bindsym $mod+d exec rofi -show run
+bindsym $mod+p exec "rofi -combi-modi window,drun -show combi"
 bindsym $mod+space exec "rofi -combi-modi window,drun -show combi"
 # 截图
 bindsym Print exec flameshot gui
