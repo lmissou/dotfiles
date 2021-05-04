@@ -28,8 +28,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-exec --no-startup-id blueman-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -101,7 +99,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+Alt+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -192,38 +190,11 @@ new_window none
 new_float normal
 hide_edge_borders both
 
-# compton
-exec --no-startup-id picom
-
-# fcitx5
-exec --no-startup-id fcitx5
-
-# notify center
-exec --no-startup-id deadd-notification-center
-
-exec --no-startup-id optimus-manager-qt
-
-# utools
-exec --no-startup-id utools
+# 自启动应用
+exec --no-startup-id sh ~/scripts/autostart-common.sh
 
 # polybar
-exec --no-startup-id ~/.config/polybar/launch.sh
-
-# i3lock-fancy
-bindsym ctrl+Shift+l exec i3lock-fancy
-
-# clash
-exec --no-startup-id clash
-
-# video wallpaper
-exec --no-startup-id sh ~/.config/i3/wallpaper.sh
-
-# autotiling
-exec --no-startup-id autotiling
-
-# flameshot截图软件
-exec --no-startup-id flameshot
-
+exec --no-startup-id sh ~/.config/polybar/launch.sh
 
 ### 按键绑定
 # rofi应用启动器
@@ -231,3 +202,9 @@ bindsym $mod+d exec rofi -show run
 bindsym $mod+space exec "rofi -combi-modi window,drun -show combi"
 # 截图
 bindsym Print exec flameshot gui
+# i3lock-fancy
+bindsym ctrl+Shift+l exec i3lock-fancy
+# 开启和关闭自动布局
+bindsym $mod+a exec autotiling
+bindsym $mod+Shift+a exec killall autotiling
+
