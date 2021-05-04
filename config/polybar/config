@@ -32,7 +32,7 @@ alert = #bd2c40
 width = 100%
 height = 23
 # show polybar on bottom
-bottom = true
+;bottom = true
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0
