@@ -18,6 +18,9 @@ super + Escape
 Print
 	flameshot gui
 
+# lock screen
+ctrl + shift + l
+	i3lock-fancy
 #
 # bspwm hotkeys
 #
