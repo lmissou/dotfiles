@@ -31,10 +31,9 @@ proxies:
   - {name: 🇭🇰 香港 01|HGC|广移|1.0, server: ddns.qdyd.paolu.icu, port: 18092, type: vmess, uuid: 64f47958-e824-35bd-b6cc-71729de4474e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /soda, ws-headers: {Host: ddns.qdyd.paolu.icu}}
   - {name: 🇭🇰 香港 02|HKT|广移|隧道测试|1.0, server: ddns.qdyd.paolu.icu, port: 19987, type: vmess, uuid: 64f47958-e824-35bd-b6cc-71729de4474e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /soda, ws-headers: {Host: ddns.qdyd.paolu.icu}}
   - {name: 🇭🇰 香港 03|HKT|湘联|1.0, server: ddns.cscncu.paolu.icu, port: 19931, type: vmess, uuid: 64f47958-e824-35bd-b6cc-71729de4474e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /soda, ws-headers: {Host: ddns.cscncu.paolu.icu}}
-  - {name: 🇭🇰 香港 04|Azure|连云港|1.0, server: 153.99.182.27, port: 10070, type: vmess, uuid: 64f47958-e824-35bd-b6cc-71729de4474e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /soda, ws-headers: {Host: 153.99.182.27}}
+  - {name: 🇭🇰 香港 04|Azure|连云港|1.0, server: 116.163.14.168, port: 10070, type: vmess, uuid: 64f47958-e824-35bd-b6cc-71729de4474e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /soda, ws-headers: {Host: 116.163.14.168}}
   - {name: 🇭🇰 香港 05|AGA|电信|0.2, server: ddns.aga01.paolu.icu, port: 8037, type: vmess, uuid: 64f47958-e824-35bd-b6cc-71729de4474e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /soda, ws-headers: {Host: ddns.aga01.paolu.icu}}
   - {name: 🇭🇰 香港 06|AGA|电信|0.2, server: ddns.aga02.paolu.icu, port: 8083, type: vmess, uuid: 64f47958-e824-35bd-b6cc-71729de4474e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /soda, ws-headers: {Host: ddns.aga02.paolu.icu}}
-  - {name: 🇭🇰 香港 08|HK-BGP|宁波|1.0, server: 223.95.200.59, port: 19975, type: vmess, uuid: 64f47958-e824-35bd-b6cc-71729de4474e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /soda, ws-headers: {Host: 223.95.200.59}}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -70,7 +69,6 @@ proxy-groups:
       - 🇭🇰 香港 04|Azure|连云港|1.0
       - 🇭🇰 香港 05|AGA|电信|0.2
       - 🇭🇰 香港 06|AGA|电信|0.2
-      - 🇭🇰 香港 08|HK-BGP|宁波|1.0
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -105,7 +103,6 @@ proxy-groups:
       - 🇭🇰 香港 04|Azure|连云港|1.0
       - 🇭🇰 香港 05|AGA|电信|0.2
       - 🇭🇰 香港 06|AGA|电信|0.2
-      - 🇭🇰 香港 08|HK-BGP|宁波|1.0
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -141,7 +138,6 @@ proxy-groups:
       - 🇭🇰 香港 04|Azure|连云港|1.0
       - 🇭🇰 香港 05|AGA|电信|0.2
       - 🇭🇰 香港 06|AGA|电信|0.2
-      - 🇭🇰 香港 08|HK-BGP|宁波|1.0
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -157,7 +153,6 @@ proxy-groups:
       - 🇭🇰 香港 04|Azure|连云港|1.0
       - 🇭🇰 香港 05|AGA|电信|0.2
       - 🇭🇰 香港 06|AGA|电信|0.2
-      - 🇭🇰 香港 08|HK-BGP|宁波|1.0
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
@@ -193,7 +188,6 @@ proxy-groups:
       - 🇭🇰 香港 04|Azure|连云港|1.0
       - 🇭🇰 香港 05|AGA|电信|0.2
       - 🇭🇰 香港 06|AGA|电信|0.2
-      - 🇭🇰 香港 08|HK-BGP|宁波|1.0
   - name: 📲 电报信息
     type: select
     proxies:
@@ -228,7 +222,6 @@ proxy-groups:
       - 🇭🇰 香港 04|Azure|连云港|1.0
       - 🇭🇰 香港 05|AGA|电信|0.2
       - 🇭🇰 香港 06|AGA|电信|0.2
-      - 🇭🇰 香港 08|HK-BGP|宁波|1.0
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -264,7 +257,6 @@ proxy-groups:
       - 🇭🇰 香港 04|Azure|连云港|1.0
       - 🇭🇰 香港 05|AGA|电信|0.2
       - 🇭🇰 香港 06|AGA|电信|0.2
-      - 🇭🇰 香港 08|HK-BGP|宁波|1.0
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -309,7 +301,6 @@ proxy-groups:
       - 🇭🇰 香港 04|Azure|连云港|1.0
       - 🇭🇰 香港 05|AGA|电信|0.2
       - 🇭🇰 香港 06|AGA|电信|0.2
-      - 🇭🇰 香港 08|HK-BGP|宁波|1.0
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
