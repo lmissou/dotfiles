@@ -17,7 +17,7 @@ blueman-applet &
 # 截图工具
 flameshot &
 # oneko
-oneko &
+#oneko &
 
 /bin/bash ~/scripts/wallpaper.sh &
 
