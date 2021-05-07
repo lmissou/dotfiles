@@ -3,9 +3,9 @@ alias c=clear
 alias e=exit
 alias lock=i3lock-fancy
 # ranger简写别名
-alias rag=ranger
+alias ra=ranger
 # 退出ranger时进入所选文件夹
-alias ra='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias cdr='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias cat=bat
 alias grep=rg
 alias ec=emacsclient
