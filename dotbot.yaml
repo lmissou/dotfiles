@@ -23,6 +23,7 @@
     ~/.config/picom.conf: config/picom.conf
     ~/.config/gitui: config/gitui
     ~/scripts: scripts
+    ~/wallpaper: wallpaper
 
 - shell:
   - [chmod +x scripts/autostart.sh]
