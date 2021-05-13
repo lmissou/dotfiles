@@ -10,6 +10,6 @@ ZSH_THEME="ys"
 
 source ${ZIM_HOME}/login_init.zsh -q &!
 source ~/.config/zsh/alias.zsh
-source ~/.config/zsh/fzf.zsh
 source ~/.config/zsh/keys.zsh
+source ~/.config/zsh/fzf.zsh
 
