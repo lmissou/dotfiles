@@ -63,7 +63,7 @@ modules-left = i3 bspwm xwindow
 ;modules-center = xwindow
 modules-center = musicbox
 ;modules-right = filesystem backlight-acpi pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = backlight-acpi pulseaudio battery temperature date powermenu
+modules-right = backlight-acpi pulseaudio xkeyboard battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
