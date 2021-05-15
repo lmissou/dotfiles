@@ -21,6 +21,11 @@ Print
 # lock screen
 ctrl + shift + l
 	i3lock-fancy
+
+# change backlight
+XF86MonBrightness{Up,Down}
+    xbacklight {+,-}5
+
 #
 # bspwm hotkeys
 #
