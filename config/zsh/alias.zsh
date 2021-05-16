@@ -2,6 +2,9 @@
 alias c=clear
 alias e=exit
 alias lock=i3lock-fancy
+# neovim
+alias vi=nvim
+alias vim=nvim
 # ranger简写别名
 alias ra=ranger
 # 退出ranger时进入所选文件夹

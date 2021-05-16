@@ -22,6 +22,10 @@ Print
 ctrl + shift + l
 	i3lock-fancy
 
+# change wallpaper random
+super + Home
+    feh --bg-fill --randomize ~/wallpaper
+
 # change backlight
 XF86MonBrightness{Up,Down}
     xbacklight {+,-}5
