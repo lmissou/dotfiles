@@ -75,6 +75,7 @@ jdk-openjdk
 krita
 kwalletmanager
 latte-dock
+lazygit
 leiningen
 lib32-alsa-lib
 lib32-fontconfig
