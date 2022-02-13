@@ -140,6 +140,7 @@ python-pyqt5-webengine
 python-pytaglib
 python-qrcode
 python-qtconsole
+qalculate-qt
 qt5ct
 ranger
 rar
