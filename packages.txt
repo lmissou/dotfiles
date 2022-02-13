@@ -24,6 +24,7 @@ bluedevil
 blueman
 bluez-utils
 bspwm
+calc
 clang
 clash
 clojure-lsp-bin
@@ -86,7 +87,7 @@ lightdm-gtk-greeter-settings
 linux
 linux-firmware
 linuxqq
-logseq-desktop
+logseq-desktop-bin
 lsd
 luit
 lxappearance
@@ -120,6 +121,7 @@ openssh
 p7zip-gui
 pa-applet-git
 pacman
+paru
 patch
 pcmanfm
 picom-jonaburg-git
@@ -226,6 +228,5 @@ xorg-xwud
 xss-lock
 xwinwrap-git
 yarn
-yay
 zip
 zsh
