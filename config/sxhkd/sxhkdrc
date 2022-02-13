@@ -20,7 +20,7 @@ Print
 
 # lock screen
 ctrl + shift + l
-	i3lock-fancy
+	loginctl lock-session
 
 # change wallpaper random
 super + Home

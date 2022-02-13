@@ -18,6 +18,10 @@ blueman-applet &
 flameshot &
 # oneko
 #oneko &
+# 锁屏和自动锁屏
+xss-lock --transfer-sleep-lock i3lock-fancy &
+xset s 300 300
+xset dpms 600 600
 
 /bin/bash ~/scripts/wallpaper.sh &
 
