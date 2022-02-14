@@ -1,4 +1,9 @@
 # my key bindings for zsh
 
+# vi keybinding
+# bindkey -v
+
+# emacs keybinding
 bindkey -e #emacs
-#bindkey -v #vi
+# tmux
+bindkey -s '^T' 'tmux attach\n'
