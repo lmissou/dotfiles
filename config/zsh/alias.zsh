@@ -12,10 +12,10 @@ alias cdr='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; 
 alias cat=bat
 alias grep=rg
 alias ec=emacsclient
-alias ls=lsd
-alias l="lsd -l"
-alias la="lsd -ail"
-alias lt="lsd --tree"
+# alias ls=lsd
+alias l="ls -l"
+alias la="ls -ail"
+alias lt="ls --tree"
 alias tl="tmux list-sessions"
 alias ta="tmux attach"
 alias pa="ps -aux"

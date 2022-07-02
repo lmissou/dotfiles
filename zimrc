@@ -3,6 +3,7 @@
 # Modules
 # -------
 
+zmodule prompt-pwd
 zmodule environment
 zmodule git
 zmodule input
