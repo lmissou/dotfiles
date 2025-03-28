@@ -1,4 +1,4 @@
-source ~/.bashrc
+source ~/.config/zsh/basic.sh
 source ~/.zplug/init.zsh
 
 HISTFILE="$HOME/.zsh_history"
