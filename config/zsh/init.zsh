@@ -1,26 +1,19 @@
-source ~/.config/zsh/basic.sh
-source ~/.zplug/init.zsh
+source ~/.config/zsh/basic.zsh
 
 HISTFILE="$HOME/.zsh_history"
 export SAVEHIST=$HISTSIZE
 
-# zplug plugins
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zdharma/fast-syntax-highlighting"
-zplug "zsh-users/zsh-history-substring-search"
-zplug "romkatv/powerlevel10k", as:theme, depth:1
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-# load zplug
-zplug load
+# zsh plugins
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-history-substring-search
+zinit light zdharma/fast-syntax-highlighting
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # 配置命令别名
 alias c=clear
@@ -39,13 +32,11 @@ fi
 if (($+commands[lsd])) then
   alias ls=lsd
 fi
-alias z=zellij
+alias ze=zellij
 alias za="zellij attach"
 alias l="ls -l"
 alias la="ls -ail"
 alias lt="ls --tree"
-alias tl="tmux list-sessions"
-alias ta="tmux attach"
 alias pa="ps -aux"
 alias pg="pa | grep"
 
