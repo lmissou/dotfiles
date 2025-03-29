@@ -18,9 +18,8 @@
     "cpu",
     "memory",
     "pulseaudio",
-    "clock",
-    "clock#simpleclock",
     "tray",
+    "clock",
     "custom/power",
   ],
   "wlr/taskbar": {
@@ -54,13 +53,15 @@
     "show-passive-items": true,
     "spacing": 10,
   },
-  "clock#simpleclock": {
-    "tooltip": false,
-    "format": " {:%H:%M}",
-  },
   "clock": {
-    "format": " {:L%a %d %b}",
+    "format": "{:%H:%M}  ",
+    "format-alt": "{:L%a %d %b, %Y (%R)}  ",
+    "tooltip-format": "<span size='12pt'><tt><small>{calendar}</small></tt></span>",
     "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
       "format": {
         "days": "<span weight='normal'>{}</span>",
         "months": "<span color='#cdd6f4'><b>{}</b></span>",
@@ -68,11 +69,12 @@
         "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
         "weeks": "<span color='#a6e3a1'><b>W{}</b></span>",
       },
-      "mode": "month",
-      "mode-mon-col": 1,
-      "on-scroll": 1,
     },
-    "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>",
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "tz_up",
+      "on-scroll-down": "tz_down",
+    },
   },
   "cpu": {
     "format": " {usage}%",
@@ -87,11 +89,7 @@
     "format-muted": "  muted",
     "format-icons": {
       "headphone": "",
-      "default": [
-        " ",
-        " ",
-        " "
-      ],
+      "default": [" ", " ", " "],
     },
     "on-click": "pavucontrol",
   },
