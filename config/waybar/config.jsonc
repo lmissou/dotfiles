@@ -1,6 +1,6 @@
 {
   "layer": "bottom",
-  "position": "bottom",
+  "position": "top",
   "height": 20,
   "spacing": 2,
   "exclusive": true,
@@ -11,7 +11,7 @@
     "custom/logo",
     "hyprland/workspaces",
     "wlr/taskbar",
-    "hyprland/window"
+    "hyprland/window",
   ],
   "modules-center": [],
   "modules-right": [
@@ -26,6 +26,7 @@
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 18,
+    "icon-theme": "Papirus",
     "tooltip-format": "{title}",
     "sort-by-app": true,
     "on-click": "activate",
@@ -39,7 +40,7 @@
     "active-only": false,
   },
   "hyprland/window": {
-    "max-length": 20,
+    "max-length": 30,
     "rewrite": {
       "(.*) - Brave": "$1",
       "(.*) - Chromium": "$1",
@@ -97,7 +98,7 @@
   "custom/logo": {
     "format": "",
     "tooltip": false,
-    "on-click": "wofi --show drun &",
+    "on-click": "rofi -show drun &",
   },
   "custom/power": {
     "tooltip": false,
