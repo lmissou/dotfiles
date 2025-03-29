@@ -65,11 +65,13 @@ window#waybar {
   color: #585b70;
 }
 
-window#waybar.empty #window {
+window#waybar.empty #window,
+#taskbar.empty {
+  opacity: 0;
   padding: 0;
   margin: 0;
+  margin-top: 5px;
   border: none;
-  background-color: transparent;
 }
 
 #cpu {
@@ -110,5 +112,4 @@ window#waybar.empty #window {
 
 tooltip {
   background-color: #181825;
-  border: 1px solid #89b4fa;
 }
