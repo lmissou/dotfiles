@@ -34,6 +34,7 @@ window#waybar {
 
 #clock,
 #pulseaudio,
+#wireplumber,
 #custom-logo,
 #custom-power,
 #custom-notification,
@@ -94,11 +95,13 @@ window#waybar.empty #window,
   color: #cdd6f4;
 }
 
-#pulseaudio {
+#pulseaudio,
+#wireplumber {
   color: #b4befe;
 }
 
-#pulseaudio.muted {
+#pulseaudio.muted,
+#wireplumber.muted {
   color: #a6adc8;
 }
 
