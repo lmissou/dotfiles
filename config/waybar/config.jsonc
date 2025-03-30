@@ -54,8 +54,8 @@
     "spacing": 10,
   },
   "clock": {
-    "format": "{:%H:%M}  ",
-    "format-alt": "{:L%a %d %b, %Y (%R)}  ",
+    "format": "  {:%H:%M}",
+    "format-alt": "  {:L%a %d %b, %Y (%R)}",
     "tooltip-format": "<span size='12pt'><tt><small>{calendar}</small></tt></span>",
     "calendar": {
       "mode": "month",
