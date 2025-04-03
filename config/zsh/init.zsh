@@ -1,14 +1,14 @@
-source ~/.config/zsh/basic.zsh
-
+# zsh history file
 HISTFILE="$HOME/.zsh_history"
 export SAVEHIST=$HISTSIZE
 
+# zinit config
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
-# zsh plugins
+# zinit plugins
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-history-substring-search
@@ -17,7 +17,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # set editor
 export EDITOR=nvim
-# emacs keymaps
+# set emacs keymaps
 set -o emacs
 
 # 配置命令别名
