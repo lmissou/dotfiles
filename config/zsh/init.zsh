@@ -15,6 +15,11 @@ zinit light zsh-users/zsh-history-substring-search
 zinit light zdharma/fast-syntax-highlighting
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
+# set editor
+export EDITOR=nvim
+# emacs keymaps
+set -o emacs
+
 # 配置命令别名
 alias c=clear
 alias e=exit
