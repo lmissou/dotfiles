@@ -5,6 +5,7 @@ export SAVEHIST=$HISTSIZE
 export EDITOR=nvim
 # set emacs keymaps
 set -o emacs
+bindkey -e
 
 # zinit config
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -23,6 +24,11 @@ zinit light zdharma/fast-syntax-highlighting
 # 配置命令别名
 alias c=clear
 alias e=exit
+alias l="ls -l"
+alias la="ls -ail"
+alias lt="ls --tree"
+alias pa="ps -aux"
+alias pg="pa | grep"
 # neovim
 if (($+commands[nvim])) then
   alias vi=nvim
@@ -41,14 +47,24 @@ fi
 if (($+commands[zoxide])) then
   eval "$(zoxide init zsh)"
 fi
-alias ze=zellij
-alias za="zellij attach"
-alias l="ls -l"
-alias la="ls -ail"
-alias lt="ls --tree"
-alias pa="ps -aux"
-alias pg="pa | grep"
-
+# zellij
+if (($+commands[zellij])) then
+  alias ze=zellij
+  alias za="zellij attach"
+  function _zellij_start_or_attach() {
+    zle push-line # Clear buffer.
+    if [[ `pidof zellij` ]]; then
+      BUFFER="zellij attach"
+    else
+      BUFFER="zellij"
+    fi
+    zle accept-line
+  }
+  zle -N _zellij_start_or_attach
+  bindkey -M emacs '^[z' _zellij_start_or_attach
+  bindkey -M vicmd '^[z' _zellij_start_or_attach
+  bindkey -M viins '^[z' _zellij_start_or_attach
+fi
 # Set up fzf key bindings and fuzzy completion
 if (($+commands[fzf])) then
   source <(fzf --zsh)
