@@ -1,6 +1,10 @@
 # zsh history file
 HISTFILE="$HOME/.zsh_history"
 export SAVEHIST=$HISTSIZE
+# set editor
+export EDITOR=nvim
+# set emacs keymaps
+set -o emacs
 
 # zinit config
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -9,16 +13,11 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # zinit plugins
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-history-substring-search
 zinit light zdharma/fast-syntax-highlighting
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
-# set editor
-export EDITOR=nvim
-# set emacs keymaps
-set -o emacs
 
 # 配置命令别名
 alias c=clear
@@ -37,6 +36,10 @@ fi
 if (($+commands[lsd])) then
   alias ls=lsd
 fi
+# zoxide, smarter cd command
+if (($+commands[zoxide])) then
+  eval "$(zoxide init zsh --cmd j)"
+fi
 alias ze=zellij
 alias za="zellij attach"
 alias l="ls -l"
@@ -44,6 +47,12 @@ alias la="ls -ail"
 alias lt="ls --tree"
 alias pa="ps -aux"
 alias pg="pa | grep"
+
+# Set up fzf key bindings and fuzzy completion
+if (($+commands[fzf])) then
+  source <(fzf --zsh)
+  zinit light Aloxaf/fzf-tab
+fi
 
 # yazi
 function y() {
