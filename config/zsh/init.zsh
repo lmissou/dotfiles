@@ -11,6 +11,7 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
+unalias zi
 
 # zinit plugins
 zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -38,7 +39,7 @@ if (($+commands[lsd])) then
 fi
 # zoxide, smarter cd command
 if (($+commands[zoxide])) then
-  eval "$(zoxide init zsh --cmd j)"
+  eval "$(zoxide init zsh)"
 fi
 alias ze=zellij
 alias za="zellij attach"
