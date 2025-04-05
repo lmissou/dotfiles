@@ -8,5 +8,10 @@ use = "pirafrank/what-size"
 rev = "b23e3a4"
 hash = "98e5f5af3efd3ba8bc2db0720187cc83"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:jump-to-char"
+rev = "9a09505"
+hash = "a670c03eb3760812e044a24f94cedc55"
+
 [flavor]
 deps = []
