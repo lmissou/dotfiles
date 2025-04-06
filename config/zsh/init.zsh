@@ -53,10 +53,11 @@ if (($+commands[zellij])) then
   alias za="zellij attach"
   function _zellij_start_or_attach() {
     zle push-line # Clear buffer.
-    if [[ `pidof zellij` ]]; then
-      BUFFER="zellij attach"
+    # if [[ `pidof zellij` ]]; then
+    if [[ -z `zellij list-sessions | grep -o default` ]]; then
+      BUFFER="zellij --session=default"
     else
-      BUFFER="zellij"
+      BUFFER="zellij attach default"
     fi
     zle accept-line
   }
