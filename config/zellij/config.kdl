@@ -5,6 +5,7 @@
 keybinds clear-defaults=true {
     locked {
         bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Alt g" { Write 7; } // send Ctrl-g(7) key
     }
     pane {
         bind "left" { MoveFocus "left"; }
@@ -254,4 +255,10 @@ default_mode "locked"
 show_startup_tips false
  
 theme "catppuccin-macchiato"
+
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}
 
