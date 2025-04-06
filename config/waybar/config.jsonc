@@ -20,6 +20,7 @@
     "wireplumber",
     "tray",
     "clock",
+    "custom/notification",
     "custom/power",
   ],
   "wlr/taskbar": {
@@ -89,15 +90,19 @@
     "format-muted": "  muted",
     "format-icons": {
       "headphone": "",
-      "default": [" ", " ", " "],
+      "default": [
+        " ",
+        " ",
+        " "
+      ],
     },
     "on-click": "pavucontrol",
   },
   "custom/logo": {
     "format": "",
     "tooltip": false,
-    "on-click": "rofi -show drun",
-    "on-click-right": "swaync-client -t -sw",
+    "on-click": "rofi -run-command \"uwsm app -- {cmd}\" -show combi",
+    "on-click-right": "rofi -run-command \"uwsm app -- {cmd}\" -show run",
   },
   "custom/power": {
     "tooltip": false,
@@ -108,13 +113,13 @@
     "escape": true,
     "exec": "swaync-client -swb",
     "exec-if": "which swaync-client",
-    "format": "{icon}",
+    "return-type": "json",
+    "format": "{icon} {text}",
+    "tooltip-format": "{text} Notification(s)",
     "format-icons": {
       "none": "󰅺",
       "notification": "󰡟",
     },
     "on-click": "sleep 0.1 && swaync-client -t -sw",
-    "return-type": "json",
-    "tooltip": false,
   },
 }
