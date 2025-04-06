@@ -1,1 +1,1 @@
-https://api.suda.cat/sub?target=clash&url=https%3A%2F%2Fsuda.sub.koicloud.pw%2Flink%2FezTpRxBQrVtEe97u%3Fsub%3D3&insert=false&emoji=true&list=false&udp=false&tfo=false&scv=false&fdn=false&sort=false&new_name=true
+https://api.suda-cdn.com/sub?target=clash&url=https://stardomusic001.sslcdnapp.net/link/W9MeE8LDX3TmZ5kt?clash=2&new_name=true
