@@ -146,10 +146,10 @@ keybinds clear-defaults=true {
         bind "Alt down" { MoveFocus "down"; }
         bind "Alt up" { MoveFocus "up"; }
         bind "Alt right" { MoveFocusOrTab "right"; }
-        bind "Alt h" { MoveFocusOrTab "left"; }
-        bind "Alt j" { MoveFocus "down"; }
-        bind "Alt k" { MoveFocus "up"; }
-        bind "Alt l" { MoveFocusOrTab "right"; }
+        bind "Alt o" { FocusNextPane; }
+        bind "Alt i" { FocusPreviousPane; }
+        bind "Alt ." { GoToNextTab; }
+        bind "Alt ," { GoToPreviousTab; }
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt =" { Resize "Increase"; }
@@ -158,8 +158,6 @@ keybinds clear-defaults=true {
         bind "Alt f" { ToggleFloatingPanes; }
         bind "Alt n" { NewPane; }
         bind "Alt t" { NewTab; }
-        bind "Alt i" { MoveTab "left"; }
-        bind "Alt o" { MoveTab "right"; }
         bind "Alt x" { CloseFocus; }
         bind "Alt z" { Detach; }
         bind "Alt q" { Quit; }
