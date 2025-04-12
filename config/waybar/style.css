@@ -10,6 +10,30 @@ window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
   background: transparent;
+  margin-left: 2rem;
+}
+
+#clock,
+#pulseaudio,
+#wireplumber,
+#custom-logo,
+#custom-power,
+#custom-notification,
+#cpu,
+#tray,
+#memory,
+#window,
+#submap,
+#workspaces button,
+#mpris,
+#taskbar {
+  border-radius: 1.5rem;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  padding: 0 1rem;
+  margin: 0 0.1rem;
+  margin-top: 5px;
+  border: 1px solid #181825;
 }
 
 #workspaces button {
@@ -30,27 +54,6 @@ window#waybar {
 #workspaces button.urgent {
   background-color: #1e1e2e;
   color: #f38ba8;
-}
-
-#clock,
-#pulseaudio,
-#wireplumber,
-#custom-logo,
-#custom-power,
-#custom-notification,
-#cpu,
-#tray,
-#memory,
-#window,
-#workspaces button,
-#mpris,
-#taskbar {
-  border-radius: 1.5rem;
-  background-color: #1e1e2e;
-  padding: 0 1rem;
-  margin: 0 0.1rem;
-  margin-top: 5px;
-  border: 1px solid #181825;
 }
 
 #mpris.playing {
@@ -110,16 +113,24 @@ window#waybar {
   color: #a6adc8;
 }
 
-#custom-logo {
-  color: #89b4fa;
-}
-
 #custom-notification {
   color: #cdd6f4;
 }
 
+#custom-logo,
+#custom-power {
+  padding-left: 0.8rem;
+  padding-right: 1rem;
+}
+
+#custom-logo {
+  color: #89b4fa;
+  margin-left: 0.4rem;
+}
+
 #custom-power {
   color: #f38ba8;
+  margin-right: 0.4rem;
 }
 
 window#waybar.empty #window,

@@ -11,6 +11,7 @@
     "custom/logo",
     "hyprland/workspaces",
     "wlr/taskbar",
+    "hyprland/submap",
     "hyprland/window",
   ],
   "modules-center": [],
@@ -49,6 +50,13 @@
       "(.*) Microsoft Teams": "$1",
     },
     "separate-outputs": true,
+  },
+  "hyprland/submap": {
+    "format": "  {}",
+    "max-length": 20,
+    "tooltip": false,
+    "on-click": "hyprctl dispatch submap reset",
+    "on-click-right": "hyprctl dispatch submap reset",
   },
   "tray": {
     "show-passive-items": true,
