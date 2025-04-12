@@ -148,13 +148,14 @@ keybinds clear-defaults=true {
         bind "Alt right" { MoveFocusOrTab "right"; }
         bind "Alt o" { FocusNextPane; }
         bind "Alt i" { FocusPreviousPane; }
-        bind "Alt ." { GoToNextTab; }
-        bind "Alt ," { GoToPreviousTab; }
+        bind "Alt ]" { GoToNextTab; }
+        bind "Alt [" { GoToPreviousTab; }
+        bind "Alt tab" { GoToNextTab; }
+        bind "Alt Shift tab" { GoToPreviousTab; }
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt =" { Resize "Increase"; }
-        bind "Alt [" { PreviousSwapLayout; }
-        bind "Alt ]" { NextSwapLayout; }
+        bind "Alt \\" { NextSwapLayout; }
         bind "Alt f" { ToggleFloatingPanes; }
         bind "Alt Shift f" { ToggleFocusFullscreen; }
         bind "Alt n" { NewPane; }
