@@ -26,7 +26,8 @@ alias c=clear
 alias e=exit
 alias l="ls -l"
 alias la="ls -ail"
-alias lt="ls --tree"
+alias lt="ls --tree --depth=3"
+alias lta="ls --tree"
 alias pa="ps -aux"
 alias pg="pa | grep"
 # neovim
