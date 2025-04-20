@@ -11,6 +11,7 @@ bindkey -M vicmd 'gh' beginning-of-line
 bindkey -M vicmd 'gl' end-of-line
 for mode in 'vicmd' 'viins'
 do
+  bindkey -M $mode '^d' delete-char
   bindkey -M $mode '^f' forward-char
   bindkey -M $mode '^b' backward-char
   bindkey -M $mode '\ef' forward-word
