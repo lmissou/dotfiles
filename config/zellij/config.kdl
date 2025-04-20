@@ -248,12 +248,10 @@ plugins {
 load_plugins {
 }
 
-default_mode "locked"
- 
 show_startup_tips false
- 
+session_serialization false
+default_mode "locked"
 theme "catppuccin-macchiato"
-
 ui {
     pane_frames {
         rounded_corners true
