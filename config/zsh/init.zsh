@@ -19,6 +19,12 @@ do
   bindkey -M $mode '^N' down-line-or-history
 done
 
+function zle_eval {
+    echo -en "\e[2K\r"
+    eval "$@"
+    zle redisplay
+}
+
 # zinit config
 declare -A ZINIT=(
   [NO_ALIASES]=1
@@ -71,7 +77,7 @@ fi
 if (($+commands[zellij])) then
   alias ze=zellij
   alias za="zellij attach"
-  function _zellij_start_or_attach() {
+  function _zellij_start_or_attach {
     zle push-line # Clear buffer.
     if [[ -z `zellij list-sessions | grep -o default` ]]; then
       BUFFER="zellij --session=default"
@@ -95,15 +101,23 @@ if (($+commands[yazi])) then
     fi
     rm -f -- "$tmp"
   }
-  function _y() {
-    zle push-line # Clear buffer.
-    BUFFER="y"
-    zle accept-line
+  function _y {
+    zle_eval y
   }
   zle -N _y
   bindkey -M emacs '^[e' _y
   bindkey -M vicmd '^[e' _y
   bindkey -M viins '^[e' _y
+fi
+# lazygit
+if (($+commands[lazygit])) then
+  function _lazygit {
+    zle_eval lazygit
+  }
+  zle -N _lazygit
+  bindkey -M emacs '^[g' _lazygit
+  bindkey -M vicmd '^[g' _lazygit
+  bindkey -M viins '^[g' _lazygit
 fi
 
 # 配置powerlevel10k主题
