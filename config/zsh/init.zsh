@@ -7,16 +7,18 @@ export EDITOR=nvim
 set -o vi
 bindkey -v
 bindkey -s -M viins 'jk' '^['
+bindkey -M vicmd 'gh' beginning-of-line
+bindkey -M vicmd 'gl' end-of-line
 for mode in 'vicmd' 'viins'
 do
-  bindkey -M $mode '^F' forward-char
-  bindkey -M $mode '^B' backward-char
-  bindkey -M $mode '^[F' forward-word
-  bindkey -M $mode '^[B' backward-word
-  bindkey -M $mode '^E' end-of-line
-  bindkey -M $mode '^A' beginning-of-line
-  bindkey -M $mode '^P' up-line-or-history
-  bindkey -M $mode '^N' down-line-or-history
+  bindkey -M $mode '^f' forward-char
+  bindkey -M $mode '^b' backward-char
+  bindkey -M $mode '\ef' forward-word
+  bindkey -M $mode '\eb' backward-word
+  bindkey -M $mode '^e' end-of-line
+  bindkey -M $mode '^a' beginning-of-line
+  bindkey -M $mode '^p' up-line-or-history
+  bindkey -M $mode '^n' down-line-or-history
 done
 
 function zle_eval {
@@ -87,9 +89,9 @@ if (($+commands[zellij])) then
     zle accept-line
   }
   zle -N _zellij_start_or_attach
-  bindkey -M emacs '^[z' _zellij_start_or_attach
-  bindkey -M vicmd '^[z' _zellij_start_or_attach
-  bindkey -M viins '^[z' _zellij_start_or_attach
+  bindkey -M emacs '\ez' _zellij_start_or_attach
+  bindkey -M vicmd '\ez' _zellij_start_or_attach
+  bindkey -M viins '\ez' _zellij_start_or_attach
 fi
 # yazi
 if (($+commands[yazi])) then
@@ -105,9 +107,9 @@ if (($+commands[yazi])) then
     zle_eval y
   }
   zle -N _y
-  bindkey -M emacs '^[e' _y
-  bindkey -M vicmd '^[e' _y
-  bindkey -M viins '^[e' _y
+  bindkey -M emacs '\ee' _y
+  bindkey -M vicmd '\ee' _y
+  bindkey -M viins '\ee' _y
 fi
 # lazygit
 if (($+commands[lazygit])) then
@@ -115,9 +117,9 @@ if (($+commands[lazygit])) then
     zle_eval lazygit
   }
   zle -N _lazygit
-  bindkey -M emacs '^[g' _lazygit
-  bindkey -M vicmd '^[g' _lazygit
-  bindkey -M viins '^[g' _lazygit
+  bindkey -M emacs '\eg' _lazygit
+  bindkey -M vicmd '\eg' _lazygit
+  bindkey -M viins '\eg' _lazygit
 fi
 
 # 配置powerlevel10k主题
