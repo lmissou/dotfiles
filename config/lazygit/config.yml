@@ -22,6 +22,7 @@ gui:
 
   authorColors:
     "*": "#b7bdf8"
+  nerdFontsVersion: "3"
 keybinding:
   universal:
     quit: "q"

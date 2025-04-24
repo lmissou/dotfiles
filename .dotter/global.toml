@@ -1,0 +1,38 @@
+[helpers]
+
+[default]
+depends = ["shell", "wm"]
+
+[default.files]
+"scripts" = "~/.scripts"
+"wallpaper" = "~/wallpaper"
+
+[default.variables]
+WALLPAPER_VIDEO = ""
+
+[shell.files]
+"config/zsh" = "~/.config/zsh"
+"config/zellij" = "~/.config/zellij"
+"config/yazi" = "~/.config/yazi"
+"config/lazygit" = "~/.config/lazygit"
+
+[wm.files]
+"config/kitty" = "~/.config/kitty"
+"config/xsettingsd" = "~/.config/xsettingsd"
+"config/gtk-3.0" = "~/.config/gtk-3.0"
+"config/gtk-4.0" = "~/.config/gtk-4.0"
+"config/qt5ct" = "~/.config/qt5ct"
+"config/qt6ct" = "~/.config/qt6ct"
+"config/Kvantum" = "~/.config/Kvantum"
+"config/uwsm" = "~/.config/uwsm"
+"config/hypr" = "~/.config/hypr"
+"config/wlogout" = "~/.config/wlogout"
+"config/waybar" = "~/.config/waybar"
+"config/rofi" = "~/.config/rofi"
+"config/swaync" = "~/.config/swaync"
+"config/clash" = "~/.config/clash"
+"config/code-flags.conf" = "~/.config/code-flags.conf"
+"config/microsoft-edge-stable-flags.conf" = "~/.config/microsoft-edge-stable-flags.conf"
+
+[settings]
+default_target_type = "automatic"

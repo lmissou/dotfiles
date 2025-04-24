@@ -1,2 +1,3 @@
 # wallpaper for hyprpaper and hyprlock
 export WALLPAPER_IMG=~/dotfiles/wallpaper/wallpaper.jpg
+export WALLPAPER_VIDEO={{ WALLPAPER_VIDEO }}
