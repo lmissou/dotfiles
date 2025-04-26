@@ -38,7 +38,9 @@ function vi-edit-command-line() {
 }
 zle -N vi-edit-command-line 
 # edit command line with $EDITOR
+bindkey -M emacs '\ee' vi-edit-command-line
 bindkey -M vicmd '\ee' vi-edit-command-line
+bindkey -M viins '\ee' vi-edit-command-line
 
 function zle_eval {
     echo -en "\e[2K\r"
