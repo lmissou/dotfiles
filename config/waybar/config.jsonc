@@ -34,7 +34,6 @@
     "on-click-middle": "close",
   },
   "hyprland/workspaces": {
-    "on-click": "activate",
     "format": "{id}",
     "all-outputs": true,
     "disable-scroll": false,
@@ -107,7 +106,7 @@
     "format": "",
     "tooltip": false,
     "on-click": "rofi -run-command \"uwsm app -- {cmd}\" -show combi",
-    "on-click-right": "rofi -run-command \"uwsm app -- {cmd}\" -show run",
+    "on-click-right": "hyprctl dispatch overview:toggle",
   },
   "custom/power": {
     "tooltip": false,
