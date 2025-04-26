@@ -3,6 +3,8 @@ HISTFILE="$HOME/.zsh_history"
 export SAVEHIST=$HISTSIZE
 # set editor
 export EDITOR=nvim
+# key timeout 0.2s (example: jk)
+export KEYTIMEOUT=20
 # set vi-mode keymaps
 set -o vi
 bindkey -v
@@ -21,6 +23,22 @@ do
   bindkey -M $mode '^p' up-line-or-history
   bindkey -M $mode '^n' down-line-or-history
 done
+# Edit command line in EDITOR
+function vi-edit-command-line() {
+  # Create a temp file and save the BUFFER to it
+  local tmp_file=$(mktemp /tmp/zsh-command-line-XXXXXX.zsh)
+  # Some users may config the noclobber option to prevent from
+  echo "$BUFFER" >! "$tmp_file"
+  # Edit the file with the specific editor
+  ${EDITOR:-vi} $tmp_file </dev/tty
+  # Reload the content to the BUFFER from the temp
+  BUFFER=$(cat $tmp_file)
+  # file after editing, and delete the temporary file.
+  rm "$tmp_file"
+}
+zle -N vi-edit-command-line 
+# edit command line with $EDITOR
+bindkey -M vicmd '\ee' vi-edit-command-line
 
 function zle_eval {
     echo -en "\e[2K\r"
@@ -108,9 +126,9 @@ if (($+commands[yazi])) then
     zle_eval y
   }
   zle -N _y
-  bindkey -M emacs '\ee' _y
-  bindkey -M vicmd '\ee' _y
-  bindkey -M viins '\ee' _y
+  bindkey -M emacs '\ey' _y
+  bindkey -M vicmd '\ey' _y
+  bindkey -M viins '\ey' _y
 fi
 # lazygit
 if (($+commands[lazygit])) then
