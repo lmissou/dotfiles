@@ -24,23 +24,12 @@ gui:
     "*": "#b7bdf8"
   nerdFontsVersion: "3"
 customCommands:
-  - key: "<c-p>"
-    description: "Push to a specific remote repository"
-    context: "localBranches, remotes, remoteBranches, tags"
-    loadingText: "Pushing ..."
-    prompts:
-      - type: "menuFromCommand"
-        title: "Which remote repository to push to?"
-        command: "git remote"
-      - type: "menu"
-        title: "How to push?"
-        options:
-          - value: "push"
-          - value: "push --force-with-lease"
-          - value: "push --force"
+  - key: "P"
+    description: "Push to a specific remote"
     #{{{{raw}}}}#
-    command: "git {{index .PromptResponses 1}} {{index .PromptResponses 0}}"
+    command: "git push {{.SelectedRemote.Name}}"
     #{{{{/raw}}}}
+    context: "remotes"
 # Keybindings
 keybinding:
   universal:
