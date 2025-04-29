@@ -1,6 +1,7 @@
 # zsh history file
 HISTFILE="$HOME/.zsh_history"
-export SAVEHIST=$HISTSIZE
+HISTSIZE=10000000
+SAVEHIST=10000000
 # set editor
 export EDITOR=nvim
 # key timeout 0.2s (example: jk)
