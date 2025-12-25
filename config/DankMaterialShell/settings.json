@@ -156,7 +156,7 @@
   "batterySuspendTimeout": 0,
   "batterySuspendBehavior": 0,
   "batteryProfileName": "",
-  "lockBeforeSuspend": false,
+  "lockBeforeSuspend": true,
   "loginctlLockIntegration": true,
   "fadeToLockEnabled": false,
   "fadeToLockGracePeriod": 5,
@@ -206,7 +206,7 @@
   "osdCapsLockEnabled": true,
   "osdPowerProfileEnabled": false,
   "osdAudioOutputEnabled": true,
-  "powerActionConfirm": false,
+  "powerActionConfirm": true,
   "powerActionHoldDuration": 0.5,
   "powerMenuActions": [
     "reboot",
