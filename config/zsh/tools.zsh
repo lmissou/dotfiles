@@ -11,6 +11,7 @@ fi
 # Set up fzf key bindings and fuzzy completion
 if (($+commands[fzf])) then
   source <(fzf --zsh)
+  zpcompinit; zpcdreplay
   zinit light Aloxaf/fzf-tab
 fi
 # zellij
