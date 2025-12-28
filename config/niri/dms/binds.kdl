@@ -191,5 +191,5 @@ binds {
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P { power-off-monitors; }
-    Mod+Insert { toggle-window-rule-opacity; }
+    Mod+Alt+O { toggle-window-rule-opacity; }
 }
