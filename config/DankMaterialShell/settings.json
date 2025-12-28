@@ -171,7 +171,7 @@
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
-  "terminalsAlwaysDark": false,
+  "terminalsAlwaysDark": true,
   "showDock": false,
   "dockAutoHide": false,
   "dockGroupByApp": false,
