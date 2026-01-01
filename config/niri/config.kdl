@@ -162,47 +162,36 @@ binds {
     Mod+V hotkey-overlay-title="Clipboard Manager" {
         spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard";
     }
-    Mod+M hotkey-overlay-title="Task Manager" {
-        spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
-    }
     Mod+Comma hotkey-overlay-title="Settings" {
-        spawn "dms" "ipc" "call" "settings" "focusOrToggle";
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle";
     }
-    Mod+Y hotkey-overlay-title="Browse Wallpapers" {
-        spawn "dms" "ipc" "call" "dankdash" "wallpaper";
+    Mod+N hotkey-overlay-title="Notification Center" {
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "notifications" "toggleHistory";
     }
-    Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
-    Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
 
     // === Security ===
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
-        spawn "dms" "ipc" "call" "lock" "lock";
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock";
     }
     Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" {
-        spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
-    }
 
     // === Audio Controls ===
     XF86AudioRaiseVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "increment" "3";
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase";
     }
     XF86AudioLowerVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "decrement" "3";
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease";
     }
     XF86AudioMute allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "mute";
-    }
-    XF86AudioMicMute allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "micmute";
+        spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput";
     }
 
     // === Brightness Controls ===
     XF86MonBrightnessUp allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
+       spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase";
     }
     XF86MonBrightnessDown allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
+       spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease";
     }
 
     // === Window Management ===
